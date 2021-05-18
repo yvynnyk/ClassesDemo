@@ -9,7 +9,9 @@ namespace ClassesDemo
         {
             var person = new Person("Alice", "Johnson", new DateTime(1990, 2, 6), Gender.Female);
             Console.WriteLine(person.ToString());
-            Console.WriteLine("An now she is " + person.Age + " years old");
+            //
+            Console.WriteLine("And now she is " + person.Age + (person.Age == 1 ? " year" : " years") + " old");
+            //
             person.AdoptPet("Baron");
             person.AdoptPet("Murchik");
             Console.WriteLine(person.ToString() + " Does she have pets : " + (person.HasPets ? "Yes" : "No"));
